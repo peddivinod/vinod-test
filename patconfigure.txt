@@ -1,9 +1,6 @@
 Step 1: Generate a Personal Access Token (PAT)
-
 Go to GitHub and log in to your account.
-
 Navigate to: Settings > Developer settings > Personal access tokens > Tokens (classic).
-
 Click on Generate new token.
 Set permissions: Give it appropriate scopes, such as repo (for full repository access).
 Generate and copy the token.
