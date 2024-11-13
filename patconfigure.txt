@@ -1,0 +1,24 @@
+Step 1: Generate a Personal Access Token (PAT)
+Go to GitHub and log in to your account.
+Navigate to: Settings > Developer settings > Personal access tokens > Tokens (classic).
+Click on Generate new token.
+Set permissions: Give it appropriate scopes, such as repo (for full repository access).
+Generate and copy the token.
+Step 2: Use the Token in Place of a Password
+When prompted to enter your username and password while using Git commands, use the token as your password:
+
+Update the remote URL (to avoid re-entering the token every time):
+
+git remote set-url origin https://<your-username>:<your-token>@github.com/your-username/vinod-test.git
+Replace <your-username> with your GitHub username, <your-token> with your personal access token, and vinod-test.git with the actual repository name.
+
+Use the Credential Manager (optional):
+
+You can store your credentials in Git’s credential manager so you won’t have to re-enter the token each time:
+git config --global credential.helper store
+Example Command for Clarity
+git remote set-url origin https://your-username:your-token@github.com/peddivinod/vinod-test.git
+After this, try pushing again with:
+
+git push origin <branch-name>
+This should resolve your authentication issue!
